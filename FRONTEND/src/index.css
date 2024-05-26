@@ -1,0 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Blinker&family=Inter:wght@100..900&family=Kode+Mono:wght@400..700&display=swap");
+body {
+  font-family: "Inter", sans-serif !important;
+  font-optical-sizing: auto;
+  font-weight: 600px !important;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
