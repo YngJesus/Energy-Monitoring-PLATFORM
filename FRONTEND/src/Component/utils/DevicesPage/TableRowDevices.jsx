@@ -66,17 +66,7 @@ function RowDevices({ id, Name, Ref, Notes, Type, Status }) {
           >
             <AiOutlineDelete />
           </Button>
-          <Link to={`/device/${id}`}>
-            <Button
-              color={"green"}
-              _hover={{ color: "white", bg: "green.500" }}
-              onClick={() => {
-                FindDevice(id);
-              }}
-            >
-              <AiFillEye />
-            </Button>
-          </Link>
+
           <Box>
             <AlertDialog
               isOpen={isDeleteOpen}

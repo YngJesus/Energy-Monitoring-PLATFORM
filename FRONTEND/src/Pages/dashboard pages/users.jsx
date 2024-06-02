@@ -20,6 +20,7 @@ function Users() {
           color="blackAlpha.700"
           fontWeight="bold"
           fontSize={"18px"}
+          maxW={"1400px"}
         >
           <GridItem pl="2" bg="white.300" area={"header"}>
             <DashNavbar />

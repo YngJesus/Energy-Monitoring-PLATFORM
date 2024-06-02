@@ -23,9 +23,16 @@ function SideBar() {
     navigate("/Login");
   }
   return (
-    <>
+    <Box position="fixed">
       <Box m={2}>
-        <Image mt={10} mb={5} height={100} src="/img/whlh.png" alt="Logo" />
+        <Image
+          ml={6}
+          mt={7}
+          mb={4}
+          height={100}
+          src="/img/whlh.png"
+          alt="Logo"
+        />
         <Box
           m="15px 10px"
           bg="rgba(255, 255, 255, 0.04)"
@@ -33,12 +40,12 @@ function SideBar() {
           rounded={8}
           color={"#9DA4AE"}
         >
-          <Text fontSize={28} pb={2} ml={3} fontWeight={500} color={"white"}>
+          <Text fontSize={25} pb={2} ml={9} fontWeight={500} color={"white"}>
             Dashboard
           </Text>
         </Box>
       </Box>
-      <Divider orientation="horizontal" />
+      <Divider orientation="horizontal" w={"260px"} />
       <Box m={"40px 40px"} color={"#9DA4AE"}>
         <Link to="/dashboard">
           <Text
@@ -46,7 +53,7 @@ function SideBar() {
             alignItems={"center"}
             gap={5}
             // bg={"red"}
-            mb={5}
+            mb={4}
             p={2}
             rounded={200}
             fontSize={14}
@@ -63,7 +70,7 @@ function SideBar() {
             alignItems={"center"}
             gap={5}
             // bg={"red"}
-            mb={5}
+            mb={4}
             p={2}
             rounded={200}
             fontSize={14}
@@ -80,7 +87,7 @@ function SideBar() {
             alignItems={"center"}
             gap={5}
             // bg={"red"}
-            mb={5}
+            mb={4}
             p={2}
             rounded={200}
             fontSize={14}
@@ -91,13 +98,13 @@ function SideBar() {
             Devices
           </Text>
         </Link>
-        <Link to="/Signup">
+        {/* <Link to="/Signup">
           <Text
             display={"flex"}
             alignItems={"center"}
             gap={5}
             // bg={"red"}
-            mb={5}
+            mb={4}
             p={2}
             rounded={200}
             fontSize={14}
@@ -107,7 +114,7 @@ function SideBar() {
             <AiFillPlusCircle size={"20"} />
             Add Admin
           </Text>
-        </Link>
+        </Link> */}
       </Box>
       <Divider orientation="horizontal" />
       <Box
@@ -124,7 +131,7 @@ function SideBar() {
             alignItems={"center"}
             gap={5}
             // bg={"red"}
-            mb={5}
+            mb={4}
             p={2}
             rounded={200}
             fontSize={14}
@@ -140,7 +147,7 @@ function SideBar() {
           alignItems={"center"}
           gap={5}
           // bg={"red"}
-          mb={5}
+          mb={4}
           p={2}
           rounded={200}
           fontSize={14}
@@ -149,10 +156,10 @@ function SideBar() {
           onClick={LogOut}
         >
           <AiOutlineLogout size={"20"} />
-          Logout
+          LogOut
         </Text>
       </Box>
-    </>
+    </Box>
   );
 }
 

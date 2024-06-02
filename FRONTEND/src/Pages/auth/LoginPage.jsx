@@ -90,8 +90,7 @@ const LoginPage = () => {
     >
       <Box
         rounded={50}
-        mt={5}
-        mb={5}
+        my={2}
         p={10}
         // pb={20}
         // maxWidth="356px"
@@ -102,12 +101,12 @@ const LoginPage = () => {
         <form onSubmit={handleLogin}>
           <VStack spacing={6}>
             <Box>
-              <Image mb={5} height={150} src="/img/bllg.png" alt="Logo" />
+              <Image height={100} src="/img/bllg.png" alt="Logo" />
             </Box>
-            <Text fontSize={"30"} fontWeight={"800"}>
+            <Text fontSize={"29"} fontWeight={"800"}>
               Welcome to EnergiWave
             </Text>
-            <Divider my={3} />
+            <Divider my={1} />
             <Text color={"black"} fontSize={21}>
               Please sign-in to open the admin dashboard{" "}
             </Text>

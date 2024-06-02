@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Box, Center, Text } from "@chakra-ui/react";
+import { Box, Center, Text, Heading, Divider } from "@chakra-ui/react";
 import axios from "axios";
 import { Line } from "react-chartjs-2";
 
@@ -45,6 +45,9 @@ const CompareDevicesChart = () => {
   return (
     <Center>
       <Box w="80%" p="4" bg="gray.100" borderRadius="lg" boxShadow="lg">
+        <Heading textAlign={"center"}>Devices Comparison</Heading>
+        <Divider orientation="horizontal" my={2} borderColor={"black"} />
+
         <LineChart data={comparisonData} linkedDevices={linkedDevices} />
       </Box>
     </Center>

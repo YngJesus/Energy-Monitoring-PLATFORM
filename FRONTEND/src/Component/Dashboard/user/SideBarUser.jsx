@@ -22,9 +22,16 @@ function SideBarUser() {
     navigate("/User-login");
   }
   return (
-    <>
+    <Box position="fixed">
       <Box m={2}>
-        <Image mt={10} mb={5} height={100} src="/img/whlh.png" alt="Logo" />
+        <Image
+          ml={6}
+          mt={7}
+          mb={4}
+          height={100}
+          src="/img/whlh.png"
+          alt="Logo"
+        />
         <Box
           m="15px 10px"
           bg="rgba(255, 255, 255, 0.04)"
@@ -32,20 +39,20 @@ function SideBarUser() {
           rounded={8}
           color={"#9DA4AE"}
         >
-          <Text fontSize={28} pb={2} ml={3} fontWeight={500} color={"white"}>
+          <Text fontSize={25} pb={2} ml={9} fontWeight={500} color={"white"}>
             Dashboard
           </Text>
         </Box>
       </Box>
       <Divider orientation="horizontal" />
-      <Box m={"40px 40px"} color={"#9DA4AE"}>
+      <Box m={"33px 40px"} color={"#9DA4AE"}>
         <Link to="/User-Dashboard">
           <Text
             display={"flex"}
             alignItems={"center"}
             gap={5}
             // bg={"red"}
-            mb={5}
+            mb={4}
             p={2}
             rounded={200}
             fontSize={14}
@@ -63,7 +70,7 @@ function SideBarUser() {
             alignItems={"center"}
             gap={5}
             // bg={"red"}
-            mb={5}
+            mb={4}
             p={2}
             rounded={200}
             fontSize={14}
@@ -80,7 +87,7 @@ function SideBarUser() {
             alignItems={"center"}
             gap={5}
             // bg={"red"}
-            mb={5}
+            mb={4}
             p={2}
             rounded={200}
             fontSize={14}
@@ -97,7 +104,7 @@ function SideBarUser() {
             alignItems={"center"}
             gap={5}
             // bg={"red"}
-            mb={5}
+            mb={4}
             p={2}
             rounded={200}
             fontSize={14}
@@ -114,7 +121,7 @@ function SideBarUser() {
             alignItems={"center"}
             gap={5}
             // bg={"red"}
-            mb={5}
+            mb={4}
             p={2}
             rounded={200}
             fontSize={14}
@@ -134,7 +141,7 @@ function SideBarUser() {
             alignItems={"center"}
             gap={5}
             // bg={"red"}
-            mb={5}
+            mb={2}
             p={2}
             rounded={200}
             fontSize={14}
@@ -150,7 +157,7 @@ function SideBarUser() {
           alignItems={"center"}
           gap={5}
           // bg={"red"}
-          mb={5}
+          mb={4}
           p={2}
           rounded={200}
           fontSize={14}
@@ -162,7 +169,7 @@ function SideBarUser() {
           Logout
         </Text>
       </Box>
-    </>
+    </Box>
   );
 }
 

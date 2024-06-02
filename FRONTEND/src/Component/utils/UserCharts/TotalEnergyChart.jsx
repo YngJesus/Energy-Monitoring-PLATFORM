@@ -9,6 +9,8 @@ import {
   Tab,
   TabPanel,
   Select,
+  Heading,
+  Divider,
 } from "@chakra-ui/react";
 import axios from "axios";
 import { Bar } from "react-chartjs-2";
@@ -69,7 +71,9 @@ const TotalEnergyChart = () => {
 
   return (
     <Center>
-      <Box w="80%" p="4" bg="gray.100" borderRadius="lg" boxShadow="lg">
+      <Box w="70%" p="4" bg="gray.100" borderRadius="lg" boxShadow="lg">
+        <Heading textAlign={"center"}>Total Energy Consumption</Heading>
+        <Divider orientation="horizontal" my={2} borderColor={"black"} />
         <Select value={period} onChange={handlePeriodChange} mb="4">
           <option value="7d">Last 7 Days</option>
           <option value="1mo">Last Month</option>

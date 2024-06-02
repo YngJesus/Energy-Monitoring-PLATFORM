@@ -9,6 +9,8 @@ import {
   Tab,
   TabPanel,
   Select,
+  Heading,
+  Divider,
 } from "@chakra-ui/react";
 import axios from "axios";
 import { Line } from "react-chartjs-2";
@@ -65,9 +67,10 @@ const TotalEnergyCostChart = () => {
 
   return (
     <Center>
-      <Box w="70%" p="4" bg="#ADD8E6" borderRadius="lg" boxShadow="lg">
-        {" "}
-        {/* Change the background color to match the sidebar */}
+      <Box w="70%" p="4" bg="gray.100" borderRadius="lg" boxShadow="lg">
+        <Heading textAlign={"center"}>Energy Cost</Heading>
+        <Divider orientation="horizontal" my={2} borderColor={"black"} />
+
         <Select value={period} onChange={handlePeriodChange} mb="4">
           <option value="7d">Last 7 Days</option>
           <option value="1mo">Last Month</option>
@@ -81,7 +84,14 @@ const TotalEnergyCostChart = () => {
           <TabPanels>
             {linkedDevices.map((deviceReference) => (
               <TabPanel key={deviceReference}>
-                <Box mb="4" p="4" bg="white" borderRadius="md" boxShadow="md">
+                <Box
+                  mb="2"
+                  p="2"
+                  border={"solid 2px Black"}
+                  bgColor="white"
+                  borderRadius="md"
+                  boxShadow="md"
+                >
                   <Text fontSize="lg" fontWeight="bold">
                     Device Cost:{" "}
                     {parseFloat(
@@ -98,11 +108,6 @@ const TotalEnergyCostChart = () => {
             ))}
           </TabPanels>
         </Tabs>
-      </Box>
-      <Box mb="4" p="4" bg="white" borderRadius="md" boxShadow="md">
-        <Text fontSize="lg" fontWeight="bold">
-          Total Cost: {totalCost.toFixed(2)} TND
-        </Text>
       </Box>
     </Center>
   );
@@ -134,14 +139,14 @@ const LineChart = ({ data }) => {
         beginAtZero: true,
         title: {
           display: true,
-          text: "kWh",
+          text: "Price",
         },
       },
       y: {
         beginAtZero: true,
         title: {
           display: true,
-          text: "Price",
+          text: "W/h",
         },
       },
     },

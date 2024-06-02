@@ -6,9 +6,16 @@ import {
   StatHelpText,
   StatArrow,
   HStack,
+  Box,
+  Text,
 } from "@chakra-ui/react";
 import { GlobalContext } from "../../../context/GlobalWrapper";
 import TypeStat from "./TypeStat";
+import {
+  AiFillUsb,
+  AiOutlineCheckCircle,
+  AiOutlineCloseCircle,
+} from "react-icons/ai";
 
 function DevicesStat() {
   const {
@@ -46,14 +53,16 @@ function DevicesStat() {
           rounded={30}
         >
           <StatLabel fontWeight={700} ml={3} fontSize={"xl"}>
-            Devices
+            Total Devices
           </StatLabel>
           <StatNumber ml={6} fontSize={"3xl"}>
             {deviceCount}
           </StatNumber>
           <StatHelpText ml={1} fontSize={"md"}>
-            <StatArrow type="increase" />
-            23.36%
+            <Box display={"flex"}>
+              <Text mr={1}>Device</Text>
+              <AiFillUsb size={25} />
+            </Box>
           </StatHelpText>
         </Stat>
         <Stat
@@ -90,8 +99,10 @@ function DevicesStat() {
             {AssignedDevice}
           </StatNumber>
           <StatHelpText ml={1} fontSize={"md"}>
-            <StatArrow type="increase" />
-            Assigned Devices
+            <Box display={"flex"}>
+              <AiOutlineCheckCircle size={25} color="green" />
+              <Text ml={1}>Assigned Devices</Text>
+            </Box>
           </StatHelpText>
         </Stat>
         <Stat
@@ -109,8 +120,10 @@ function DevicesStat() {
             {UnAssignedDevice}
           </StatNumber>
           <StatHelpText ml={1} fontSize={"md"}>
-            <StatArrow type="decrease" />
-            Unassigned Devices
+            <Box display={"flex"}>
+              <AiOutlineCloseCircle size={25} color="red" />
+              <Text ml={1}>Unassigned Devices</Text>
+            </Box>
           </StatHelpText>
         </Stat>
       </HStack>

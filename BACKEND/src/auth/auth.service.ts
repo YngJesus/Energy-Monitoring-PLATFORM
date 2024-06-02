@@ -42,6 +42,7 @@ export class AuthService {
       roles: user.roles,
       id: user.id,
       firstName: user.firstName,
+      lastName: user.lastName,
       linkedDevice: user.linkedDevice,
     });
     return { token };

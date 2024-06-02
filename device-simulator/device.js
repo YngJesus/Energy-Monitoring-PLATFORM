@@ -56,15 +56,15 @@ const sendData = async (data) => {
 
 // Function to send data for both devices
 const sendBothDevicesData = async () => {
-  const data1 = generateData("BBBB");
-  const data2 = generateData("QSD");
+  const data1 = generateData("SS0H");
+  const data2 = generateData("BT1K");
 
-  console.log("Generated Data for BBBB:", data1);
-  console.log("Generated Data for QSD:", data2);
+  console.log("Generated Data for SS0H:", data1);
+  console.log("Generated Data for BT1K:", data2);
 
   await Promise.all([sendData(data1), sendData(data2)]);
 };
 
 // Send data every hour for two months (approximately 60 days)
 // Send data every minute for testing
-setInterval(sendBothDevicesData, 1000); // 60000 milliseconds = 1 minute
+setInterval(sendBothDevicesData, 100); // 60000 milliseconds = 1 minute

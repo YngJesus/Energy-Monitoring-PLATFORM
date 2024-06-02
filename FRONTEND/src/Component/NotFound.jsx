@@ -1,7 +1,13 @@
 import { Box, Button, Image, Text, Flex } from "@chakra-ui/react";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function NotFound() {
+  const navigate = useNavigate();
+
+  const handleHome = () => {
+    navigate("/HomeInerface");
+  };
   return (
     <Flex align="center" justify="center" height="100vh">
       <Box>
@@ -20,6 +26,7 @@ function NotFound() {
             variant="outline"
             size="lg"
             _hover={{ color: "white", bg: "teal.400" }}
+            onClick={handleHome}
           >
             Home
           </Button>

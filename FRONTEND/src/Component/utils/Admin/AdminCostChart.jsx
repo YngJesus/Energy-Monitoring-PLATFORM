@@ -64,7 +64,7 @@ const AdminEnergyCostChart = ({ linkedDevice }) => {
 
   return (
     <Center>
-      <Box w="70%" p="4" bg="#ADD8E6" borderRadius="lg" boxShadow="lg">
+      <Box w="70%" p="4" bg="gray.100" borderRadius="lg" boxShadow="lg">
         {" "}
         {/* Change the background color to match the sidebar */}
         <Select value={period} onChange={handlePeriodChange} mb="4">
@@ -82,6 +82,11 @@ const AdminEnergyCostChart = ({ linkedDevice }) => {
               <TabPanel key={deviceReference}>
                 <Box mb="4" p="4" bg="white" borderRadius="md" boxShadow="md">
                   <Text fontSize="lg" fontWeight="bold">
+                    Total Cost: {totalCost.toFixed(2)} TND
+                  </Text>
+                </Box>
+                <Box mb="4" p="4" bg="white" borderRadius="md" boxShadow="md">
+                  <Text fontSize="lg" fontWeight="bold">
                     Device Cost:{" "}
                     {parseFloat(
                       energyCostData[deviceReference].totalCost.replace(
@@ -97,11 +102,6 @@ const AdminEnergyCostChart = ({ linkedDevice }) => {
             ))}
           </TabPanels>
         </Tabs>
-      </Box>
-      <Box mb="4" p="4" bg="white" borderRadius="md" boxShadow="md">
-        <Text fontSize="lg" fontWeight="bold">
-          Total Cost: {totalCost.toFixed(2)} TND
-        </Text>
       </Box>
     </Center>
   );

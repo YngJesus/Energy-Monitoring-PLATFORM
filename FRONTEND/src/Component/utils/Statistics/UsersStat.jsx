@@ -8,10 +8,12 @@ import {
   Box,
   HStack,
   VStack,
+  Text,
 } from "@chakra-ui/react";
 import { GlobalContext } from "../../../context/GlobalWrapper";
 import TableStat from "../UsersPage/TableStat";
 import GenderStat from "./GenderStat";
+import { AiOutlineUser } from "react-icons/ai";
 function UsersStat() {
   const { UsersNumber, NewUsersNumber, newusersCount, usersCount } =
     useContext(GlobalContext);
@@ -35,14 +37,16 @@ function UsersStat() {
           rounded={30}
         >
           <StatLabel fontWeight={700} ml={3} fontSize={"xl"}>
-            Users
+            Total Users
           </StatLabel>
           <StatNumber ml={6} fontSize={"3xl"}>
             {usersCount}
           </StatNumber>
-          <StatHelpText ml={1} fontSize={"md"}>
-            <StatArrow type="increase" />
-            23.36%
+          <StatHelpText ml={3} fontSize={"md"}>
+            <Box display={"flex"}>
+              <Text mr="1">User</Text>
+              <AiOutlineUser size={25} />
+            </Box>
           </StatHelpText>
         </Stat>
         <Stat

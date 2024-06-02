@@ -14,13 +14,13 @@ function ProfileMenu() {
   return (
     <Menu>
       <MenuButton colorScheme="pink">
-        <Avatar
+        {/* <Avatar
+          name="Dan Abrahmov"
           mr={2}
           ml={1}
           size="md"
-          src="/img/Baha.png"
           cursor={"pointer"}
-        />
+        /> */}
       </MenuButton>
       <MenuList>
         <MenuGroup title="Admin">

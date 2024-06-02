@@ -31,6 +31,7 @@ function PeakUsageTimes() {
           color="blackAlpha.700"
           fontWeight="bold"
           fontSize={"18px"}
+          maxW={"1300px"}
         >
           <GridItem pl="2" bg="white.300" area={"header"}>
             <UserNavbar />
