@@ -1,4 +1,0 @@
-ORG = iotDTB
-buk = devices-iot
-
-token = wyoxblrvNaq01_Jj2I1Zr_uiz5hmDK6olA9ueR0ppXz7x9Gm2f89r6xxfs26boNMJ8WYnTaYwdcAVil6jMfseA==
