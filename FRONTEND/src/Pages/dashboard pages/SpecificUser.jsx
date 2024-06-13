@@ -26,7 +26,7 @@ function SpecificUser() {
           color="blackAlpha.700"
           fontWeight="bold"
           fontSize={"18px"}
-          maxW={"1200px"}
+          // maxW={"1200px"}
         >
           <GridItem pl="2" bg="white.300" area={"header"}>
             <DashNavbar />

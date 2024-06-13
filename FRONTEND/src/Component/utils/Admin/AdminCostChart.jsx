@@ -9,6 +9,9 @@ import {
   Tab,
   TabPanel,
   Select,
+  Alert,
+  AlertIcon,
+  AlertTitle,
 } from "@chakra-ui/react";
 import axios from "axios";
 import { Line } from "react-chartjs-2";
@@ -55,7 +58,14 @@ const AdminEnergyCostChart = ({ linkedDevice }) => {
   };
 
   if (error) {
-    return <Text>Error: {error.message}</Text>;
+    return (
+      <Alert status="error">
+        <AlertIcon />
+        <AlertTitle>
+          No electricity usage recorded in the last 7 days!
+        </AlertTitle>
+      </Alert>
+    );
   }
 
   if (Object.keys(energyCostData).length === 0) {

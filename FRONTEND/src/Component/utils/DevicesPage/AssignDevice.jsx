@@ -10,12 +10,14 @@ import {
   FormLabel,
   Input,
   Button,
+  useToast, // Import useToast from Chakra UI
 } from "@chakra-ui/react";
 import axios from "axios"; // Import Axios
 import { GlobalContext } from "../../../context/GlobalWrapper";
 
 function AssignDevice({ onClose, id }) {
   const [deviceRef, setDeviceRef] = useState("");
+  const toast = useToast(); // Initialize useToast
 
   // Function to handle the POST request
   const { token } = useContext(GlobalContext);
@@ -33,7 +35,14 @@ function AssignDevice({ onClose, id }) {
       );
       // If successful, close the modal
       onClose();
-      // Optionally, you can add code to handle success message or other UI updates
+      // Show success toast message
+      toast({
+        title: "Device Assigned",
+        description: "The device has been successfully assigned.",
+        status: "success",
+        duration: 5000,
+        isClosable: true,
+      });
     } catch (error) {
       // If an error occurs, handle it
       console.error("Error assigning device:", error);

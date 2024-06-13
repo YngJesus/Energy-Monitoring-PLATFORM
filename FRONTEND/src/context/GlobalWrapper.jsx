@@ -106,7 +106,15 @@ export default function Wrapper({ children }) {
   };
 
   const Update = async (form, setForm, id) => {
-    const { _id, roles, createdAt, updatedAt, __v, ...updateData } = form;
+    const {
+      _id,
+      roles,
+      linkedDevice,
+      createdAt,
+      updatedAt,
+      __v,
+      ...updateData
+    } = form;
 
     const headers = { Authorization: `Bearer ${token}` };
     try {
@@ -272,7 +280,8 @@ export default function Wrapper({ children }) {
   };
 
   const UpdateDevice = async (form, setForm, id) => {
-    const { _id, roles, createdAt, updatedAt, __v, ...updateData } = form;
+    const { _id, Status, roles, createdAt, updatedAt, __v, ...updateData } =
+      form;
 
     const headers = { Authorization: `Bearer ${token}` };
     try {

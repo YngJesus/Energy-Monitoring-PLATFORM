@@ -56,11 +56,11 @@ const sendData = async (data) => {
 
 // Function to send data for both devices
 const sendBothDevicesData = async () => {
-  const data1 = generateData("SS0H");
-  const data2 = generateData("BT1K");
+  const data1 = generateData("QSD");
+  const data2 = generateData("MU1U");
 
-  console.log("Generated Data for SS0H:", data1);
-  console.log("Generated Data for BT1K:", data2);
+  console.log("Generated Data for QSD:", data1);
+  console.log("Generated Data for MU1U:", data2);
 
   await Promise.all([sendData(data1), sendData(data2)]);
 };
